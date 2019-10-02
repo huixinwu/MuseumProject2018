@@ -2,151 +2,408 @@
   box-sizing: border-box;
   font-family:consolas;
 }
-
 img{
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 1100px) {
-  body {
-
+body {
+    padding: 10px;
   }
-  div.navbar{
+  .home{
+    background-color:black;
+    height:50px; width:100%;
+  }
+.navbar{
+    overflow: hidden;
+    background-color: red;
+    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    height: 40px;
+  }
+  /* -- navbar --*/
+  .navbar_bottom{
+    display: none;
+  }
+  .navbar, .navbar_bottom{
     overflow: hidden;
     background-color: black;
     position: sticky;
-    bottom: 0;
+    top: 0;
     width: 100%;
-    height: 40px;
-
+    height: 60px;
+    position: fixed;
+    font-size: 18px;
+    font-weight: 600;
   }
-  div.nny_title{
-    font-size: 60px;
-  }
-  div.subtitle{
-    font-size: 25px;
-  }
-  div.container{
-    width: 100%;
-    height:700px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  div.intro{
-    padding: 30px 60px 30px 60px;
-    font-size: 17px;
-    width: 100%;
-    height: 35%;
-    overflow:hidden;
-  }
-  div.slideshow-container {
-    width: 80%;
-    height: 65%;
-    margin-left: 10%;
-
-  }
-  div.participants{
-    width: 100%;
-    height: 800px;
-    margin:auto;
-  }
-  div.navbar_bottom{
-      display: block;
-      overflow: hidden;
-      background-color: rgb(255,170,51);
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      height: 50px;
-  }
-  div.navbar{
-    display: none;
-  }
-  div.navbar_bottom a {
+  .navbar a {
     float: left;
-    font-size: 16px;
+    color: white;
     text-align: center;
-    padding: 14px 16px 14px 20px;
+    padding: 14px 16px;
     text-decoration: none;
   }
-  div.navbar_bottom a:hover{
-    background-color: black;
-    color: rgb(255,170,51);
+  .navbar a:hover{
+    background-color: rgb(255,170,51);
   }
-  /* footer */
-  div.footer>div{
-    width: 80%;
+  /*end of dropdown list --*/
+  /* BODY */
+  .title{
+   width: 100%;
+   height: 180px;
+   background-color: black;
+   position: relative;
+  }
+  .nny_title{
+    position: absolute;
+    font-size: 70px;
+    top: 20px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-family: "cooper black";
+    color: white;
+    text-shadow: 5px 5px 5px rgb(255,170,51);
+    overflow: hidden;
+    animation: titleAnimation 5s infinite linear;
+  }
+  @keyframes titleAnimation {
+    0%{text-shadow: 5px 5px 5px rgb(255,170,51); color: white;}
+    12%{text-shadow: 0px 5px 5px rgb(255,170,51); color: white;}
+    24%{text-shadow: 0px 0px 5px rgb(255,170,51); color: white;}
+    36%{text-shadow: 0px -5px 5px white; color:rgb(255,170,51);}
+    50%{text-shadow: -5px -5px 5px white; color:rgb(255,170,51);}
+    62%{text-shadow: 0px -5px 5px white; color:rgb(255,170,51);}
+    75%{text-shadow: 0px 0px 5px white; color:rgb(255,170,51);}
+    88%{text-shadow: 0px 5px 5px rgb(255,170,51); color:white;}
+    100%{text-shadow: 5px 5px 5px rgb(255,170,51); color:white;}
+  }
+  .subtitle{
+    width: 97%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 10px;
+    position: absolute;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    left: 1%;
+    overflow: hidden;
+  }
+  /* -- INTRO  --*/
+  .container{
+    width: 100%;
+    height:460px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
-  /* --end of footer --*/
-  p.msgCards{
+  .intro{
+    padding: 30px 70px 30px 70px;
+    font-size: 17px;
+    width: 45%;
+    height: 100%;
+    float: left;
+    overflow:scroll;
+  }
+  .line{
+    width: 0.2%;
+    height: 100%;
+    background-color: rgb(255,170,51);
+    margin-right: 2%;
+    margin-left: 2%;
+    float: left;
+  }
+  .subtitleTabs{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+    background-color: rgb(255,170,51);
+    color: white;
+    margin-top: 50px;
+    margin: auto;
+
+  }
+  /* --  SLIDESHOW --*/
+  /* Slideshow container */
+  .slideshow-container {
+    width: 55%;
+    height: 100%;
+    float: left;
+    position: relative;
+    margin: auto;
+  }
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 60px;
+    left: 20%;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .mySlides{
+    width: 500px;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    height:6px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: rgba(255,170,51,0.6);
+    box-shadow: 0 0 10px rgb(255,170,51);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: rgb(255,170,51);
+  }
+  /* Fading animation */
+  .fade {
+    animation: fade 1.5s linear;
+  }
+  @keyframes fade {
+    from{opacity: 0.3}
+    to{opacity: 1}
+  }
+  /* end of container -- */
+  /* -- PARTICIPANTS --*/
+  .participantsTop{
+    padding-top: 2em;
+    color: white;
+  }
+  .participants{
+    width: 700px;
+    height: 700px;
+    margin:auto;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  .part_align{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0px;
+  }
+  .row{
+    width: 80%;
+    height: 30%;
+    margin: auto;
+  }
+  .rowTop{
+    margin-top:50px;
+  }
+  .cols{
+    width: 32%;
+    height: 90%;
+    margin:0.5%;
+    float: left;
+  }
+  /* -- FLIP CARDS --*/
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    border-radius: 10px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    z-index: 2;
+      border-radius: 10px;
+  }
+
+  .flip-card-back {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+      border-radius: 10px;
+  }
+  .cardTitle{
+    width: 100%;
+    height: 15%;
+    background-color:  rgb(255,170,51);
+    padding: 5px;
+    position: absolute;
+    top:0;
+  }
+  .msgCards{
+    width: 90%;
+    height: 3em;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 0;
-    padding-top: 2px;
+    padding-top: 5px;
     margin-left: 5%;
     border-radius: 0px 0px 10px 10px;
+    font-size: 0.8em;
+  }
+  /* end of participants */
+  /* footer */
+  .footer{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom:50px;
+    height: auto;
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer>div{
+    background-color:black;
+    color:white;
+    width: 40%;
+    margin: 10px;
+    font-size: 16px;
+    float: left;
+    height: auto;
+  }
+  .contact1{
+    width: 100%;
+    height: 30%;
+  }
+  .contact1_img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 1%;
+  }
+  .contact1_info{
+    width: 80%;
+    height: 80%;
+    float: left;
+    padding: 6px;
+  }
+  .footer i{
     font-size: 12px;
-    overflow: hidden;
   }
-  div.modal-content{ width:80%; height: auto;}
-  div.modalText{ padding: 12px; font-size: 13px;}
-  img.modalImg{
-    height:60%;
-    margin-top: 5%;
-  }
+.footerItem{
+  padding-top: 50px;
 }
-/* -- MEDIA SMALL --*/
-@media only screen and (max-width: 800px) {
-  body {
-
+  /* -- end of footer -- */
+  a{
+    text-decoration: none;
+    color:white;
   }
-  div.navbar{
-    overflow: hidden;
-    background-color: black;
-    position: sticky;
-    bottom: 0;
+  /* -- MODALS */
+    .w3-modal{
+    z-index:3;
+    display:none;
+    padding-top:60px;
+    position:fixed;
+    top:0;
+    left: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.4)
+  }
+  .modal-content{
+    margin:auto;
+    background-color:#fff;
+    position:relative;
+    padding:0;
+    outline:0;
+    height: 650px;
+    width:750px;
+  }
+  .modalTitle{
     width: 100%;
-    height: 40px;
+    background-color: rgb(255,170,51);
+    color:white;
+    padding: 10px;
+    font-size: 30px;
   }
-  div.nny_title{
-    font-size: 39px;
+  .modalText{
+    padding: 10px;
+    text-align: justify;
   }
-  div.subtitle{
-    font-size: 18px;
+  .modalSubtitle{
+    font-size: 16px;
   }
-  div.container{
+  .modalImage{
     width: 100%;
-    height:700px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  div.intro{
-    padding: 10px 30px 10px 30px;
-    font-size: 14px;
-    width: 100%;
-    height: 35%;
-    overflow: hidden;
-    margin-bottom: 10px;
-  }
-  div.slideshow-container {
-    width: 100%;
-    height: 65%;
+    height: 45%;
     margin: auto;
   }
-  div.mySlides{
+  .modalMore{
     width: 100%;
+    color:white;
+    height: 5%;
+    background-color: rgb(255,170,51);
   }
-  div.text{
-    font-size: 12px;
+  .modalImg{
+    border-radius:20px;
+    width:45%;
+    height:90%;
+    float:left;
+    margin-left:3.1%;
+    margin-top: 2%;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
   }
-  div.participants{
-    width: 100%;
-    height: 600px;
-    margin:auto;
+  .modal_close{
+    width: 2%;
+    height: 2%;
+    float: right;
   }
-div.navbar_bottom{
-      display: block;
+  a.modal_close:hover{
+    box-shadow: 0px 0px 10px black;
+  }
+  .w3-container:after,.w3-container:before,{content:"";display:table;clear:both}
+  .w3-container,{padding:0.01em 16px}
+  .modal-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+/*--- BOTTOM NAV TABS --*/
+.navbar_bottom{
+      display: none;
       overflow: hidden;
       background-color: rgb(255,170,51);
       position: sticky;
@@ -154,411 +411,248 @@ div.navbar_bottom{
       width: 100%;
       height: 50px;
   }
-  div.navbar{
-    display: none;
-  }
-  div.navbar_bottom a {
+.navbar_bottom a {
     float: left;
     font-size: 16px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  div.navbar_bottom a:hover{
+.navbar_bottom a:hover{
     background-color: black;
     color:rgb(255,170,51);
   }
-  /* footer */
-  div.footer>div{
+/*-------------------------------------------------------------------*/
+/* -- MEDIA SMALL --*/
+@media only screen and (max-width: 950px) {
+  .participantsTop{
+    padding-top: 0em;
+  }
+.navbar{
+    display: none;
+  }
+  .navbar_bottom{
+        display: block;
+    }
+.nny_title{
+    font-size: 39px;
+  }
+.subtitle{
+    font-size: 18px;
+  }
+.container{
+    width: 100%;
+    height:600px;
+    margin: auto;
+  }
+.intro{
+    padding: 10px 30px 10px 30px;
+    font-size: 14px;
+    width: 100%;
+    height: 40%;
+    overflow: scroll;
+    margin-bottom: 10px;
+    float: none;
+  }
+.slideshow-container {
+    margin-top: 40%;
+    height: 60%;
+    width: 450px;
+    margin: auto;
+    float: none;
+  }
+.mySlides{
+    width: 100%;
+  }
+.text{
+    font-size: 12px;
+  }
+.participants{
+    width: 500px;
+    height: 600px;
+    margin:auto;
+    top: 30px;
+    margin-bottom: 60px;
+  }
+  .part_align{
+    width: 480px;
+    height:480px;
+    top:60px;
+    left:10px;
+  }
+  .rowTop{
+    margin-top:40px;
+  }
+/*---modal window - 950px --*/
+.modal-content{
+  height: auto;
+  width:80%;
+}
+.modalTitle{
+  padding: 10px;
+  font-size: 20px;
+}
+.modalSubtitle{
+  font-size: 11px;
+}
+.modalText{
+  padding: 12px;
+  font-size: 12px;
+  text-align: justify;
+  height: auto;
+}
+.w3-modal{
+  padding-top:30px;
+}
+.modalImg{
+  width:50%;
+  height:auto;
+  float:none;
+  margin-left: 100px;
+}
+/*-- -*/
+/* footer */
+.footer>div{
     width: 80%;
     font-size: 13px;
   }
-div.footer i{
+.footer i{
   font-size: 11px;
 }
-  /* --end of footer --*/
-  p.msgCards{
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 0;
-    padding-top: 2px;
-    margin-left: 5%;
-    border-radius: 0px 0px 10px 10px;
-    overflow: hidden;
-    font-size: 9px;
-    height: 35px;
+.footerItem{
+  padding-top: 20px;
+}
+} /* -- END OF MEDIA SMALL */
+/*-------------------------------------------------------------------*/
+/* -- WEB APP  --*/
+@media only screen and (max-width: 400px) {
+  body{
+    padding: 5px;
   }
-  div.modal-content{ width:80%; height: auto;}
-  div.modalText{ padding: 12px; font-size: 13px;}
-  img.modalImg{
-    height:60%;
-    margin-top: 5%;
+  .title{
+   height: 130px;
   }
-}
-/* -- END OF MEDIA SMALL */
-/* HEADER*/
-/* -- navbar --*/
-.navbar_bottom{
-  display: none;
-}
-.navbar, .navbar_bottom{
-  overflow: hidden;
-  background-color: black;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  font-size: 18px;
-  font-weight: 600;
-}
-.navbar a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.navbar a:hover{
-  background-color: rgb(255,170,51);
-}
-/*end of dropdown list --*/
-/* BODY */
-
-.title{
- width: 100%;
- height: 180px;
- background-color: black;
- position: relative;
-}
-.nny_title{
-  position: absolute;
-  font-size: 70px;
-  top: 20px;
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  font-family: "cooper black";
-  color: white;
-  text-shadow: 5px 5px 5px rgb(255,170,51);
-  overflow: hidden;
-  animation: titleAnimation 5s infinite linear;
-}
-@keyframes titleAnimation {
-  0%{text-shadow: 5px 5px 5px rgb(255,170,51); color: white;}
-  12%{text-shadow: 0px 5px 5px rgb(255,170,51); color: white;}
-  24%{text-shadow: 0px 0px 5px rgb(255,170,51); color: white;}
-  36%{text-shadow: 0px -5px 5px white; color:rgb(255,170,51);}
-  50%{text-shadow: -5px -5px 5px white; color:rgb(255,170,51);}
-  62%{text-shadow: 0px -5px 5px white; color:rgb(255,170,51);}
-  75%{text-shadow: 0px 0px 5px white; color:rgb(255,170,51);}
-  88%{text-shadow: 0px 5px 5px rgb(255,170,51); color:white;}
-  100%{text-shadow: 5px 5px 5px rgb(255,170,51); color:white;}
-}
-.subtitle{
-  width: 97%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 10px;
-  position: absolute;
-  font-size: 30px;
-  padding: 10px;
-  text-align: center;
-  color: white;
-  left: 1%;
-  overflow: hidden;
-}
-/* -- INTRO  --*/
+  .nny_title{
+    font-size: 30px;
+    top: 0px;
+    height: auto;
+  }
+  .subtitle{
+    height: auto;
+    font-size: 13px;
+    padding-bottom: 20px;
+  }
 .container{
-  width: 100%;
-  height:460px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
+    height:550px;
+  }
 .intro{
-  padding: 50px 100px 50px 100px;
-  font-size: 18px;
-  text-align: justify;
-  width: 50%;
-  height: 100%;
-  float: left;
-  overflow:hidden;
-}
-.line{
-  width: 0.2%;
-  height: 100%;
-  background-color: rgb(255,170,51);
-  margin-right: 2%;
-  margin-left: 2%;
-  float: left;
-}
-.subtitleTabs{
-  width: 100%;
-  height: 60px;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 15px;
-  background-color: rgb(255,170,51);
-  color: white;
-  margin-top: 50px;
-  margin: auto;
-
-}
-/* --  SLIDESHOW --*/
-/* Slideshow container */
+    padding: 15px 25px 15px 25px;
+    font-size: 12px;
+    width: 100%;
+    height: 45%;
+    overflow: scroll;
+    margin-bottom: 10px;
+    float: none;
+  }
+  /*---------- SLIDESHOW WEB APP----------*/
 .slideshow-container {
-  width: 45%;
-  height: 100%;
-  float: left;
-  position: relative;
-  margin: auto;
-}
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  width: 60%;
-  height: 50px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 60px;
-  left: 20%;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-.mySlides{
-  width: 80%;
-  height: 90%;
-  margin: auto;
-  border-radius: 10px;
-}
-/* The dots/bullets/indicators */
-.dot {
-  height:6px;
-  width: 20px;
-  margin: 0 2px;
-  background-color: rgba(255,170,51,0.6);
-  box-shadow: 0 0 10px rgb(255,170,51);
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active {
-  background-color: rgb(255,170,51);
-}
-/* Fading animation */
-.fade {
-  animation: fade 1.5s linear;
-}
-@keyframes fade {
-  from{opacity: 0.3}
-  to{opacity: 1}
-}
-/* end of container -- */
-/* -- PARTICIPANTS --*/
+    margin-top: 55%;
+    height: 260px;
+    width: 300px;
+    margin: auto;
+    float: none;
+  }
+  .text {
+    font-size: 12px;
+    padding: 5px 8px;
+    width: 80%;
+    height: auto;
+    bottom: 40px;
+    left: 10%;
+  }
+  /* Number text (1/3 etc) */
+  .numbertext {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+  .mySlides{
+    width: 300px;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    height:10px;
+    width: 10px;
+  }
+  /* ----------PARTICIPANTS WEB APP-----------*/
 .participants{
-  width: 60%;
-  height: 900px;
-  margin:auto;
-  position: relative;
+    width: 320px;
+    height: 480px;
+    top: 50px;
+    bottom: 50px;
+    margin:auto;
+    margin-bottom: 100px;
+  }
+  .part_align{
+    width: 330px;
+    height: 340px;
+    left: 0px;
+  }
+  .row{
+    width: 90%;
+    height: 33%;
+    margin: auto;
+    margin: 0px;
+    margin-left: 4%;
+  }
+  .rowTop{
+    margin-top:0px;
+  }
+  .cols{
+    width: 32%;
+    height: 100%;
+    margin:0.5%;
+    float: left;
+  }
+  .msgCards{
+    height: auto;
+    bottom: 0;
+    padding: 2px;
+    margin-left: 5%;
+    font-size: 0.6em;
+  }
+/*---modal window - web app--*/
+.modal-content{
+  width:90%;
 }
-.part_align{
-  width:100%;
-  height:100%;
-  position: absolute;
-  transform: translate(-50%, -102%);
-  left: 50%;
-}
-.row{
-  width: 80%;
-  height: 30%;
-  margin: auto;
-}
-.cols{
-  width: 32%;
-  height: 90%;
-  margin:0.5%;
-  float: left;
-}
-/* -- FLIP CARDS --*/
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  perspective: 1000px;
-  border-radius: 10px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-}
-
-.flip-card-front {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  z-index: 2;
-    border-radius: 10px;
-}
-
-.flip-card-back {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: white;
-  transform: rotateY(180deg);
-  z-index: 1;
-    border-radius: 10px;
-}
-.cardTitle{
-  width: 100%;
-  height: 15%;
-  background-color:  rgb(255,170,51);
-  padding: 5px;
-  position: absolute;
-  top:0;
-}
-.msgCards{
-  width: 90%;
-  height: 15%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  bottom: 0;
-  padding-top: 5px;
-  margin-left: 5%;
-  border-radius: 0px 0px 10px 10px;
-}
-/* end of participants */
-/* footer */
-.footer{
-  width: 100%;
-  height: auto;
-  background-color:black;
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer>div{
-  background-color:black;
-  color:white;
-  width: 40%;
-  margin: 10px;
-  font-size: 16px;
-  float: left;
-  height: auto;
-}
-.contact1{
-  width: 100%;
-  height: 30%;
-
-}
-.contact1_img{
-  width: 30px;
-  height: 30px;
-  float: left;
-  margin: 1%;
-}
-.contact1_info{
-  width: 80%;
-  height: 80%;
-  float: left;
-  padding: 6px;
-}
-.footer i{
-  font-size: 12px;
-}
-
-/* -- end of footer -- */
-a{
-  text-decoration: none;
-  color:white;
-}
-/* -- MODALS */
 .modalTitle{
-  width: 100%;
-  background-color: rgb(255,170,51);
-  color:white;
-  padding: 20px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 15px;
+}
+.modalSubtitle{
+  font-size: 10px;
 }
 .modalText{
-  padding: 20px;
-  text-align: justify;
+  padding: 12px;
+  font-size: 10px;
+  text-align: left;
 }
 .w3-modal{
-  z-index:3;
-  display:none;
-  padding-top:60px;
-  position:fixed;
-  top:0;
-  left: 0;
-  margin: auto;
-  width:100%;
-  height:100%;
-  overflow:auto;
-  background-color:rgb(0,0,0);
-  background-color:rgba(0,0,0,0.4)
-}
-.modal-content{
-  margin:auto;
-  background-color:#fff;
-  position:relative;
-  padding:0;
-  outline:0;
-  height: 100%;
-  width:60%;
-}
-.modalImage{
-  width: 100%;
-  height: 50.5%;
-  margin: auto;
-}
-.modalMore{
-  width: 100%;
-  color:white;
-  height: 5%;
-  background-color: rgb(255,170,51);
+  padding-top:20px;
 }
 .modalImg{
-  border-radius:20px;
-  width:45%;
-  height:90%;
-  float:left;
-  margin-left:3.1%;
-  margin-top: 2%;
-  box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+  width:80%;
+  margin-left: 30px;
 }
-.modal_close{
-  width: 2%;
-  height: 2%;
-  float: right;
+/*-- -*/
+/* footer */
+.footer>div{
+    width: 80%;
+    font-size: 13px;
+  }
+.footer i{
+  font-size: 11px;
 }
-a.modal_close:hover{
-  box-shadow: 0px 0px 10px black;
+.footerItem{
+  padding-top: 20px;
 }
-.w3-container:after,.w3-container:before,{content:"";display:table;clear:both}
-.w3-container,{padding:0.01em 16px}
-.modal-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+} /* -- END OF WEB APP */
