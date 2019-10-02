@@ -9,7 +9,7 @@
 <body>
 
 <!-- top banner -->
-<div id="home" style="background-color:black; height:50px; width:100%;"></div>
+<div id="home" class="home"></div>
     <div class="title">
     <div class="nny_title">New New Yorkers</div>
     <div class="subtitle">Create Your Smartphone App Workshop</div>
@@ -67,13 +67,10 @@
     </div><!-- end of slideshow -->
   </div> <!--  end of container-->
   <!-- -->
-  <p id="participants"></p>
-  <br/><br/><br/>
+  <p id="participants" class="participantsTop">.</p>
   <div class="subtitleTabs">PARTICIPANTS</div>
   <!-- PARTICIPANTS -->
-<div class="participants" ><img src="images/participants.jpg" alt="Participants background">
-    <br/>
-    <br/>
+<div class="participants" ><img src="images/participants.jpg" alt="Participants background" style="filter:grayscale(100%); ">
     <div class="part_align">
         <div class="row rowTop" >
               <div class="cols">
@@ -117,7 +114,7 @@
                       <a href="Yumbell/HOME.html" target="_blank">
                         <div class="flip-card-back">
                           <img src="images/TBA1.png" style="border-radius: 10px; width:90%; height:90%; margin-top:5%;"/>
-                          <p class="msgCards">Architectural Designer by Yumbell</p>
+                          <p class="msgCards">Architectural Design by Yumbell</p>
                         </div>
                       </a>
                   </div>
@@ -198,7 +195,7 @@
                   <div class="flip-card-front">
                     <img src="images/part8.jpg" alt="Avatar Mariela" style="border-radius: 10px; width:90%; height:90%; margin-top:5%;">
                   </div>
-                    <a href="#" target="_blank">
+                    <a href="#contact" target="_blank">
                       <div class="flip-card-back">
                         <img src="images/mariela.jpg" style="border-radius: 10px; width:90%; height:90%; margin-top:5%;"/>
                         <p class="msgCards">Workshop Assistant <br>Mariela</p>
@@ -214,7 +211,7 @@
                   <div class="flip-card-front">
                     <img src="images/part9.jpg" alt="Avatar " style="border-radius: 10px; width:90%; height:90%; margin-top:5%;">
                     </div>
-                    <a href="#" target="_blank">
+                    <a href="#contact" target="_blank">
                       <div class="flip-card-back">
                         <img src="images/TBA2.png" style="border-radius: 10px; width:90%; height:90%; margin-top:5%;"/>
                         <p class="msgCards">NNY Program Manager <br>Guido</p>
@@ -230,50 +227,51 @@
   <!-- Modal: Maritza-->
 <div id="modalMaritza" class="w3-modal" onclick="this.style.display='none'">
       <div class="modal-content modal-animate-zoom">
-        <div class="modalTitle">Maritza Wu <a class="modal_close" href="#participants"><img src="images/close.png" alt="close icon"></a><div style="font-size:16px;">Workshop Instructor</div></div>
-        <div class="modalText">Huixin(Maritza) Wu earned her Master in Electrical Engineering from Stony Brook University. She is also a network and website design certified from Stony Brook University and Queens College. </br><br/>
-        Ms. Wu has been an instructor at both New York City College of Technology, NYCCT, and Queensborough Community College since 2007, and she is currently a technology engineering lecturer at QCC. Beside of lecturing, Ms. Wu is also the course coordinator of the digital computing course and the lead of course development for the America’s Promise Grant, TechWorks program. Ms. Wu as the lead of course development of TechWorks, she designed courses for web technology and phone app technology. The courses were created based on her experience as a programmer and as a website designer together with on an extensive research and interviews to industry advisers in the field of technology.
+        <div class="modalTitle">Maritza Wu <a class="modal_close" href="#participants"><img src="images/close.png" alt="close icon"></a><div class="modalSubtitle">Workshop Instructor</div></div>
+        <div class="modalText">Huixin(Maritza) Wu earned her Master in Electrical Engineering from Stony Brook University. She is also a network and website design certified from Stony Brook University and Queens College. <br>
+        Ms. Wu has been an instructor at both New York City College of Technology, NYCCT, and Queensborough Community College since 2007, and she is currently a technology engineering lecturer at QCC.
+        <br><br>
+        “It was a pleasure serving my community and teaching people excited to learn in the field of technology. I learned a lot from my students and their passion and effort to carry out a technological project. I am very happy with the results, and I want to congratulate all the participants and thanks to the New New Yorkers program for making this workshop possible” <i>Maritza Wu</i>
         </div>
-        <div class="modalImage"><img src="images/instructor.jpg" alt="Instructor: Maritza" class="modalImg"><img src="images/instructor1.jpg" alt="Instructor: Maritza"class="modalImg"></div>
+        <figure class="modalImage"><img src="images/instructor.jpg" alt="Instructor: Maritza" class="modalImg"><img src="images/instructor1.jpg" alt="Instructor: Maritza"class="modalImg"></figure>
         <div class="modalMore"></div>
       </div>
   </div>
   <!-- -->
   <!-- footer -->
+<!--      -->
+<!-- FOOTER -->
 <div class="footer" id="contact">
-  <div>CONTACT <hr/>Guido Garaycochea<br/><i>New New Yorkers Program Manager</i>
+  <div class="footerItem" ><b>CONTACT </b><hr/>Guido Garaycochea<br/><i>New New Yorkers Program Manager</i>
     <div class="contact1"><div class="contact1_img"><img src="images/phone1.png" ></div><div class="contact1_info">718.592.9700 x135</div></div>
     <div class="contact1"><div class="contact1_img"><img src="images/email.png"></div><div class="contact1_info"><a href="mailto:ggaraycochea@queensmuseum.org">ggaraycochea@queensmuseum.org</a></div></div>
-
   </div>
-
-  <div>QUEENS MUSEUM <hr/>
+  <div class="footerItem"><b><a href="https://queensmuseum.org/" target="_blank">QUEENS MUSEUM</a></b> <hr/>
     New York City Building <br/><i>Flushing Meadows Corona Park<br/>
     Queens, NY 11368</i>
     <div class="contact1"><div class="contact1_img"><img src="images/tren7.png" alt="images photo"></div><div class="contact1_info">Mets-Willets Point</div></div>
   </div>
-
-  <div>FOLLOW US <hr/>
-    <div class="contact1"><div class="contact1_img"><img src="images/twitter.png" ></div><div class="contact1_img"><img src="images/facebook.png" ></div><div class="contact1_img"><img src="images/instagram.png" ></div></div>
+  <div class="footerItem"><b>FOLLOW US </b><hr/>
+    <div class="contact1"><div class="contact1_img"><a href="https://twitter.com/QueensMuseum" target="_blank"><img src="images/twitter.png" alt="Follo Us on Twitter" title="Follo Us on Twitter"></a></div>
+    <div class="contact1_img"><a href="https://www.facebook.com/QueensMuseum" target="_blank"><img src="images/facebook.png" alt="Follo Us on Facebook" title="Follo Us on Facebook"></a></div>
+    <div class="contact1_img"><a href="https://www.instagram.com/queensmuseum/" target="_blank"><img src="images/instagram.png" alt="Follo Us on Instagram" title="Follo Us on Instagram"></a></div></div>
   </div>
-
-  <div>WORKSHOP INSTRUCTOR<hr/> 2019 @ Maritza Wu</div>
-
+  <div class="footerItem"><b>WORKSHOP INSTRUCTOR</b><hr/> 2019 @ Maritza Wu</div>
 </div> <!-- end of footer -->
-<div style="background-color:black; height:50px; width:100%;"></div>
+
 <!-- navbar -->
 <div class="navbar">
   <a href="#home">HOME</a>
   <a href="#participants">PARTICIPANTS</a>
   <a href="#contact">CONTACT</a>
 </div>
-<!-- end of navbar -->
 
 <div class="navbar_bottom">
   <a href="#home">HOME</a>
   <a href="#participants">PARTICIPANTS</a>
   <a href="#contact">CONTACT</a>
 </div>
+<!-- end of navbar -->
 <script src="js/index.js"></script>
 </html>
 </body>
