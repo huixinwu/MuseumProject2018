@@ -147,17 +147,19 @@ img{
   padding-top:0.1em;
   }
   .container{
-    height:500px;
+    height:300px;
   }
-  .tipImages{
-    height: 200px;
-    width: 90%;
-    margin-bottom: 20px;
+  .newsImages{
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
   }
   .texto{
-    width: 90%;
-    height: 250px;
+    margin-top: 20px;
+    width: 70%;
+    height: 260px;
     font-size: 0.8em;
+    overflow: scroll;
   }
   .footer{
     padding: 30px;
