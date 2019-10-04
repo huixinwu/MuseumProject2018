@@ -353,7 +353,7 @@ body {
     padding:0;
     outline:0;
     height: 650px;
-    width:750px;
+    width:1000px;
   }
   .modalTitle{
     width: 100%;
@@ -363,7 +363,7 @@ body {
     font-size: 30px;
   }
   .modalText{
-    padding: 10px;
+    padding: 20px;
     text-align: justify;
   }
   .modalSubtitle{
@@ -379,10 +379,11 @@ body {
     color:white;
     height: 5%;
     background-color: rgb(255,170,51);
+    margin-top: 20px;
   }
   .modalImg{
     border-radius:20px;
-    width:45%;
+    width:35%;
     height:90%;
     float:left;
     margin-left:3.1%;
@@ -401,6 +402,21 @@ body {
   .w3-container,{padding:0.01em 16px}
   .modal-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
 
+  .readMore{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255,170,51);
+    padding: 5px 15px 5px 15px;
+    margin: 20px 10px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+  }
+  .readMore:hover{
+    font-weight: 600;
+    box-shadow: 0px 0px 2px 2px black;
+    color: black;
+  }
 /*--- BOTTOM NAV TABS --*/
 .navbar_bottom{
       display: none;
@@ -422,6 +438,7 @@ body {
     background-color: black;
     color:rgb(255,170,51);
   }
+
 /*-------------------------------------------------------------------*/
 /* -- MEDIA SMALL --*/
 @media only screen and (max-width: 950px) {
@@ -543,7 +560,7 @@ body {
     padding-bottom: 20px;
   }
 .container{
-    height:500px;
+    height:550px;
     width: 100%;
   }
 .intro{
