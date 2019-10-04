@@ -56,6 +56,7 @@ li a:active{
 font-size: 1.2em;
 padding: 20px;
 }
+
 .contenido{
   width: 100%;
   height: 50%;
@@ -65,26 +66,19 @@ padding: 20px;
 }
 
 h2{
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
 }
+figure img{
+  width: 450px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 20px;
+}
 .division{
-  width: 90%;
-  height: 300px;
   margin-bottom: 50px;
 }
-.article{
-  width: 31%;
-  height: 100%;
-  float: left;
-  margin: 10px;
-}
-img{
-  border-radius: 20px;
-  background-color: yellow;
-}
 .invierno{
-  font-size:1.2em;
   background-color:lightblue;
 }
 .otono{
@@ -113,3 +107,30 @@ p{
   padding: 20px;
 
 }
+/*--- APP VIEW SCREEN --*/
+/*---------------------*/
+@media only screen and (max-width:900px) {
+h1{
+  width: 100%;
+  font-size: 0.9em;
+  padding: 12px;
+  float: none;
+}
+.menu{
+  width: 100%;
+  height: auto;
+  font-size: 0.55em;
+}
+figure img{
+  width: 90%;
+  height:auto;
+  margin: 10px;
+  border-radius: 10px;
+}
+h2, h3{
+  font-size: 0.9em;
+}
+p{
+  font-size: 0.7em;
+}
+}/*---end APP VIEW screen ---*/
