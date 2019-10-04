@@ -1,0 +1,20 @@
+<html>
+<head><title>Manualidades</title>
+<link href="css/manualidades.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="juegos">Manualidades Juegos</div>
+<div id="inf">
+	<div class="j"><img src="imagenes/manualidades/m2.jpg" alt="manualidades 1"/></div>
+ 	<div class="j"><img src="imagenes/manualidades/m8.jpg" alt="manualidades 2"/></div>
+	<div class="j"><img src="imagenes/manualidades/m9.jpg" alt="manualidades 3"/></div>
+	<div class="j"><img src="imagenes/manualidades/m6.png" alt="manualidades 4"/></div>
+	<div class="j"><img src="imagenes/manualidades/m7.jpg" alt="manualidades 5"/></div>
+</div>
+<div id="inf">
+	<div class="n"><img src="imagenes/manualidades/m1.jpg" alt="manualidades 1"/></div>
+	<div class="n"><img src="imagenes/manualidades/m4.jpg" alt="manualidades 1"/></div>
+	<div class="n"><img src="imagenes/manualidades/m11.jpg" alt="manualidades 1"/></div>
+	<div class="n"><img src="imagenes/manualidades/m10.jpg" alt="manualidades 1"/></div>
+	<div class="n"><img src="imagenes/manualidades/m12.png" alt="manualidades 1"/></div>
+</div>

@@ -1,0 +1,161 @@
+body{
+	height: 500px;
+	padding: 10px;
+}
+*{
+	box-sizing: border-box;
+}
+/* -- navbar --*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 98%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: rgb(230,185,40);
+	font-size: 20px;
+	font-weight: 500;
+}
+/* -- */
+/* image links */
+a{
+	color: white;
+}
+.imgLinks{
+	font-size: 2em;
+	position: absolute;
+	background-color:rgba(0,0,0,0.5);
+	padding:10px;
+	width: 200px;
+	text-align: center;
+}
+.NNY{
+	width: 100%;
+	height: 200px;
+	margin-bottom:1%;
+	padding: 0;
+}
+.contenedor{
+	width: 90%;
+	height: 650px;
+	margin-bottom: 20px;
+	margin: auto;
+}
+.columna{
+		position: relative;
+		width: 400px;
+		height:265px;
+		border: ridge 10px;
+		margin: 10px;
+		float: left;
+	}
+	.columnaRight{
+			position: relative;
+			width: 820px;
+			height:550px;
+			border: ridge 10px;
+			margin: 10px;
+			float: left;
+		}
+img{
+	width:100%;
+	height:100%;
+}
+footer{
+	background-color: rgb(230,185,40);
+	height: 100px;
+	text-align: center;
+	padding: 20px;
+}
+/* --- Window page --*/
+.window{
+	width: 100%;
+	height: 800px;
+}
+.imgWindow{
+	width:500px;
+	height: auto;
+	margin-top: 100px;
+	margin-left: 30%;
+}
+.imgWindow:hover{box-shadow: 0px 0px 100px rgb(230,185,40);}
+/*-------------------------------------------------------------------*/
+/* -- MEDIUM VIEW --*/
+@media only screen and (max-width: 1500px) {
+	.contenedor{
+		width: 90%;
+	}
+	.columna{
+			width: 290px;
+			height:190px;
+		}
+	.columnaRight{
+				width: 600px;
+				height:400px;
+		}
+	.imgLinks{
+				width: 50%;
+				font-size: 1.5em;
+		}
+}
+/*-------------------------------------------------------------------*/
+/* -- WEB APP  --*/
+@media only screen and (max-width: 750px) {
+
+li a {
+  padding: 10px;
+  text-decoration: none;
+}
+.active {
+	font-size: 17px;
+}
+.NNY{
+	height: 90px;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.contenedor{
+	margin: 0px;
+	width: 100%;
+	height: 650px;
+	margin-bottom: 5px;
+}
+	.columnaRight, .columna{
+			width: 100%;
+			height:180px;
+			border: ridge 3px;
+			margin: 0px 0px 5px 0px;
+			float: left;
+		}
+		.imgLinks{
+			width:50%;
+			font-size: 1em;
+			left: 25%;
+			top: 40%;
+		}
+		footer{
+			font-size: 0.7em;
+		}
+}
