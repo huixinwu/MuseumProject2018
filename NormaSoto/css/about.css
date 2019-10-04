@@ -181,7 +181,7 @@ overflow:hidden;
   float:left;
   padding: 15px 30px 15px 20px;
   margin-left: 5%;
-  font-size: 1em;
+  font-size: 0.9em;
   }
   .readMore, .readMore a{
     width: 150px;
@@ -249,7 +249,7 @@ overflow:hidden;
 }
 /*--------------------------------------*/
 /*-------- APP VIEW ------*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 body{
   padding: 5px;
 }
@@ -265,7 +265,7 @@ padding:0.1em;
   margin-bottom: 50px;
   }
 .photo{
-  width: 100%;
+  width: 90%;
   height: 320px;
   }
 .intro{
