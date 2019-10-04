@@ -1,0 +1,32 @@
+body{
+   background: url("Light Blue Wall.jpg");
+   background-size: 100% 100%;
+   padding: 10px;
+}
+p{
+  margin-left: 50px;
+  text-align: justify;
+}
+.bottomImg{
+   width:375px;
+   height:250px;
+}
+/* -- APP SCREEN --*/
+@media only screen and (max-width: 900px) {
+  body{
+    font-size: 0.8em;
+  }
+nav{
+	font-size: 0.8em;
+}
+.imgPanorama{
+  width: 100%;
+  height: auto;
+}
+p{
+  margin-left: 0px;
+}
+.bottomImg{
+  width: 100%;
+  height: auto;
+}
