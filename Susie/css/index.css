@@ -123,12 +123,11 @@ footer{
 /* -- WEB APP  --*/
 @media only screen and (max-width: 750px) {
 	/* --- Window page --*/
-.window{
-	width: 80%;
-	height: auto;
-	margin:auto;
+.imgWindow{
+	width:80%;
+	margin-top: 80px;
+	margin-left: 10%;
 }
-
 li a {
   padding: 10px;
   text-decoration: none;
